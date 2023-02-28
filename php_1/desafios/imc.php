@@ -36,4 +36,4 @@ switch (true) {
         break;
     default: 
         echo "Obesidade grau III";
-}
+};

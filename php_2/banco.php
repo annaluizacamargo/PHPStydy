@@ -33,6 +33,9 @@ $contasCorrentes['123.456.789-16'] = depositar(
     valorADepositar: 300,
 );
 
+// FUNÇÃO PARA APAGAR / REMOVER UM ITEM (incluindo de uma lista) =
+unset($contasCorrentes['123.456.789-10']);
+
 titularComLetrasMaiusculas($contasCorrentes['123.456.789-16']);
 
 foreach ($contasCorrentes as $cpf => $conta) {

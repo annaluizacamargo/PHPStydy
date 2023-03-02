@@ -1,0 +1,9 @@
+https://www.php.net/manual/en/errorfunc.constants.php
+
+O PHP trabalha com três principais níveis de erro:
+
+    E_WARNING   => é um aviso de que o PHP não conseguiu realizar alguma instrução, mas continuará a execução do programa.
+    E_NOTICE    => ocorre quando o PHP encontra algum problema, mas consegue contorná-lo. Por exemplo, se tentarmos acessar e exibir o índice 0 das nossas $contasCorrentes, que não existe, receberemos um PHP Notice. Isso porque o PHP entende que esse índice não existe e devolve um valor nulo (Null).
+    E_ERROR     => é o PHP informando que ocorreu um problema e não conseguirá continuar com a execução.
+
+

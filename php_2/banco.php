@@ -33,6 +33,8 @@ $contasCorrentes['123.456.789-16'] = depositar(
     valorADepositar: 300,
 );
 
+titularComLetrasMaiusculas($contasCorrentes['123.456.789-16']);
+
 foreach ($contasCorrentes as $cpf => $conta) {
     //FORMA SIMPLES DE STRING = "$cpf => $conta[titular] // $conta[saldo]"
     //FORMA COMPLEXA DE STRING = "$cpf => {$conta['titular']} // {$conta['saldo']}"

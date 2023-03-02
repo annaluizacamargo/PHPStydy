@@ -29,3 +29,12 @@ function depositar(array $conta, float $valorADepositar)
         exibeMensagem(mensagem: "Depósitos precisam ser positivos");
     };
 };
+
+
+// Quando passamos um parâmetro sem o & estamos somente passando o valor, ou seja, como uma cópia, e por isso as alterações feitas não refletem o resultado final.
+// Para fazer uma alteração na referência, é necessário utilizar o &.
+
+function titularComLetrasMaiusculas(array &$conta)
+{
+    $conta['titular'] = mb_strtoupper($conta['titular']);
+};

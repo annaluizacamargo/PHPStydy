@@ -5,7 +5,7 @@
 
 function exibeMensagem(string $mensagem): void
 {
-    echo $mensagem . PHP_EOL;
+    echo $mensagem . '<br>';
 };
 
 function sacar(array $conta, float $valorASacar): array

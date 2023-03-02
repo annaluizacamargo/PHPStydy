@@ -38,11 +38,20 @@ unset($contasCorrentes['123.456.789-10']);
 
 titularComLetrasMaiusculas($contasCorrentes['123.456.789-16']);
 
+echo "<ul>";
 foreach ($contasCorrentes as $cpf => $conta) {
     //PEGANDO OS VALORES DE UMA ARRAY PARA VARIÁVEIS SEPARADAS
     //Aqui estamos acessando a conta e atribuindo suas props em variáveis
-    list('titular' => $titular, 'saldo' => $saldo) = $conta;
+        //list('titular' => $titular, 'saldo' => $saldo) = $conta;
     //FORMA SIMPLES DE STRING = "$cpf => $conta[titular] // $conta[saldo]"
     //FORMA COMPLEXA DE STRING = "$cpf => {$conta['titular']} // {$conta['saldo']}"
-    exibeMensagem(mensagem: "$cpf => $titular // $saldo");
+    exibeConta($conta);
 };
+
+function exibeConta(array $conta)
+{
+    list('titular' => $titular, 'saldo' => $saldo) = $conta;
+    echo "<li>Titular: $titular. Saldo: $saldo</li>";
+};
+
+echo "</ul>";

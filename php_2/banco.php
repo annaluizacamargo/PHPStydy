@@ -36,7 +36,10 @@ $contasCorrentes['123.456.789-16'] = depositar(
 titularComLetrasMaiusculas($contasCorrentes['123.456.789-16']);
 
 foreach ($contasCorrentes as $cpf => $conta) {
+    //PEGANDO OS VALORES DE UMA ARRAY PARA VARIÁVEIS SEPARADAS
+    //Aqui estamos acessando a conta e atribuindo suas props em variáveis
+    list('titular' => $titular, 'saldo' => $saldo) = $conta;
     //FORMA SIMPLES DE STRING = "$cpf => $conta[titular] // $conta[saldo]"
     //FORMA COMPLEXA DE STRING = "$cpf => {$conta['titular']} // {$conta['saldo']}"
-    exibeMensagem(mensagem: "$cpf => {$conta['titular']} // {$conta['saldo']}");
+    exibeMensagem(mensagem: "$cpf => $titular // $saldo");
 };

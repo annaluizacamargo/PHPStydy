@@ -38,20 +38,38 @@ unset($contasCorrentes['123.456.789-10']);
 
 titularComLetrasMaiusculas($contasCorrentes['123.456.789-16']);
 
-echo "<ul>";
-foreach ($contasCorrentes as $cpf => $conta) {
+//echo "<ul>";
+//foreach ($contasCorrentes as $cpf => $conta) {
     //PEGANDO OS VALORES DE UMA ARRAY PARA VARIÁVEIS SEPARADAS
     //Aqui estamos acessando a conta e atribuindo suas props em variáveis
         //list('titular' => $titular, 'saldo' => $saldo) = $conta;
     //FORMA SIMPLES DE STRING = "$cpf => $conta[titular] // $conta[saldo]"
     //FORMA COMPLEXA DE STRING = "$cpf => {$conta['titular']} // {$conta['saldo']}"
-    exibeConta($conta);
-};
+    //exibeConta($conta);
+//};
 
-function exibeConta(array $conta)
-{
-    list('titular' => $titular, 'saldo' => $saldo) = $conta;
-    echo "<li>Titular: $titular. Saldo: $saldo</li>";
-};
+?>
 
-echo "</ul>";
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PHP</title>
+</head>
+<body>
+    <h1>Contas correntes</h1>
+    <dl>
+        <?php foreach($contasCorrentes as $cpf => $conta) { ?>
+                <dt>
+                    <h3><?= $conta['titular']; ?> - <?= $cpf; ?></h3>
+                </dt>
+                <dd>
+                    Saldo: <?= $conta['saldo']; ?>
+                </dd><br>
+        <?php } ?>
+    </dl>
+</body>
+</html>
